@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#This is a Bash script with the minimum number of commands I use to automate my fix
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
