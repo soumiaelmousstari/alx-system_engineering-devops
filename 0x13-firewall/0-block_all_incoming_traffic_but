@@ -1,9 +1,9 @@
 sudo update get
 sud get install ufw
+sudo ufw status verbose
 sudo ufw default deny incoming
 sudo ufw default allow outging
 sudo ufw allow 22/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 80/tcp
 sudo ufw enable
-sudo ufw status verbose
