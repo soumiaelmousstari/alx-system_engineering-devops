@@ -13,9 +13,9 @@ def number_of_subscribers(subreddit):
     invalid subreddit is given, the function should return 0."""
     response = requests.get("https://www.reddit.com/r/{}/about.json"
                             .format(subreddit),
-                            headers={"User-Agent": "Mozilla/5.0"},
+                            headers={"User-Agent": "Google Chrome Version 124.0.6367.93"},
                             allow_redirects=False)
-    if response.status_code != 200:
-        return 0
-
-    return response.json().get("data").get("subscribers")
+    if response.status_code == 200:
+        return response.json().get("data").get("subscribers")
+    else:
+        return 0;
